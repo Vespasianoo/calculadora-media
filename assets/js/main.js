@@ -1,11 +1,11 @@
+let resultado = document.querySelector("#resultado")
+let exibirMediaNoSpan = document.querySelector("#mediafinal")
+
 let liInputBox = document.querySelector(".list")
 
 let btnFormSubmit = document.querySelector("#btnFormSubmit")
 let btnFormAdd = document.querySelector("#btnFormAdd")
 let btnFormRemove = document.querySelector("#btnFormRemove")
-
-let calculo;
-
 
 
 function Criando() {
@@ -17,6 +17,7 @@ function Remover() {
 }
 
 function Calcular() {
+    let calculo;
     let soma = 0;
     let anchors = document.querySelectorAll('input')
     var arrayOfAnchors = [];
@@ -40,6 +41,11 @@ function Calcular() {
 
 /* criar a function para limpar inputs e functions para set aprovado ou reprovado */
 
+
+function Limpar() {
+    resultado.innerHTML = ""
+    exibirMediaNoSpan.innerHTML = ""
+}
 
 
 btnFormSubmit.addEventListener("click", (evento) =>{
