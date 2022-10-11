@@ -1,6 +1,8 @@
 const btnFormSubmit = document.querySelector(".btn")
 let liInputBox = document.querySelector(".list")
 
+let calculo;
+
 function Criando() {
     liInputBox.insertAdjacentHTML('beforeend', '<li><input type="number" placeholder="Digite o número"></li>')   
 }
@@ -34,3 +36,11 @@ function Calcular() {
 /* criar a function para limpar inputs e functions para set aprovado ou reprovado */
 
 
+function limpar() {
+    anchors.innerHTML = ""
+}
+
+
+btnFormSubmit.addEventListener("click", (evento) =>{
+    evento.preventDefault();
+})

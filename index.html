@@ -21,6 +21,7 @@
 </head>
 <body>
     <div class="container">
+        <form>
             <div class="input-group" id="input-group">
                 <header>
                     <h1>Calculadora de média</h1>
@@ -38,12 +39,13 @@
                 </div>
 
                 <div class="btn"> 
-                    <button id="btnFormSubmit" title="Calcular média" onclick="Calcular()">Calcular</button>
-                    <button title="Adicionar mais campos" onclick="Criando()">+ </button>
-                    <button title="Remover campos" onclick="Remover()">- </button>
-                    <button title="Limpar valores" type="reset">Limpar</button>
+                    <button id="btnFormSubmit" type="submit" title="Calcular média" onclick="Calcular()">Calcular</button>
+                    <button title="Adicionar mais campos" type="menu" onclick="Criando()">+ </button>
+                    <button title="Remover campos" type="menu" onclick="Remover()">- </button>
+                    <button title="Limpar valores" type="reset" onclick="limpar()">Limpar</button>
                 </div>
             </div>
+        </form>
     </div>
     <script src="assets/js/main.js"></script>
 </body>
