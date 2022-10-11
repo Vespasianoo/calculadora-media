@@ -1,7 +1,12 @@
-const btnFormSubmit = document.querySelector(".btn")
 let liInputBox = document.querySelector(".list")
 
+let btnFormSubmit = document.querySelector("#btnFormSubmit")
+let btnFormAdd = document.querySelector("#btnFormAdd")
+let btnFormRemove = document.querySelector("#btnFormRemove")
+
 let calculo;
+
+
 
 function Criando() {
     liInputBox.insertAdjacentHTML('beforeend', '<li><input type="number" placeholder="Digite o número"></li>')   
@@ -12,19 +17,19 @@ function Remover() {
 }
 
 function Calcular() {
-    var soma = 0;
+    let soma = 0;
     let anchors = document.querySelectorAll('input')
     var arrayOfAnchors = [];
     
-    for (var i = 0; i < anchors.length; i++) {
+    for (let i = 0; i < anchors.length; i++) {
       var item = anchors[i];
       arrayOfAnchors.push(Number(item.value));
     };
 
     console.log(arrayOfAnchors);
 
-    for(var i = 0; i < arrayOfAnchors.length; i++) {
-        soma += arrayOfAnchors[i];
+    for(let a = 0; a < arrayOfAnchors.length; a++) {
+        soma += arrayOfAnchors[a];
     }
     console.log(soma);
 
@@ -36,11 +41,15 @@ function Calcular() {
 /* criar a function para limpar inputs e functions para set aprovado ou reprovado */
 
 
-function limpar() {
-    anchors.innerHTML = ""
-}
-
 
 btnFormSubmit.addEventListener("click", (evento) =>{
+    evento.preventDefault();
+})
+
+btnFormAdd.addEventListener("click", (evento) =>{
+    evento.preventDefault();
+})
+
+btnFormRemove.addEventListener("click", (evento) =>{
     evento.preventDefault();
 })
