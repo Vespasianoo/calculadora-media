@@ -7,6 +7,21 @@ let btnFormSubmit = document.querySelector("#btnFormSubmit")
 let btnFormAdd = document.querySelector("#btnFormAdd")
 let btnFormRemove = document.querySelector("#btnFormRemove")
 
+let calculo = 0
+
+
+btnFormSubmit.addEventListener("click", (evento) =>{
+    evento.preventDefault();
+})
+
+btnFormAdd.addEventListener("click", (evento) =>{
+    evento.preventDefault();
+})
+
+btnFormRemove.addEventListener("click", (evento) =>{
+    evento.preventDefault();
+})
+
 
 function Criando() {
     liInputBox.insertAdjacentHTML('beforeend', '<li><input type="number" placeholder="Digite o número"></li>')   
@@ -17,7 +32,6 @@ function Remover() {
 }
 
 function Calcular() {
-    let calculo;
     let soma = 0;
     let anchors = document.querySelectorAll('input')
     var arrayOfAnchors = [];
@@ -37,25 +51,28 @@ function Calcular() {
     calculo = soma / arrayOfAnchors.length
     console.log(calculo)
 
+    aprovado()
 }
-
-/* criar a function para limpar inputs e functions para set aprovado ou reprovado */
-
 
 function Limpar() {
     resultado.innerHTML = ""
     exibirMediaNoSpan.innerHTML = ""
 }
 
-
-btnFormSubmit.addEventListener("click", (evento) =>{
-    evento.preventDefault();
-})
-
-btnFormAdd.addEventListener("click", (evento) =>{
-    evento.preventDefault();
-})
-
-btnFormRemove.addEventListener("click", (evento) =>{
-    evento.preventDefault();
-})
+function aprovado() {
+    let condicao = calculo >= 6
+  
+    if (condicao) {
+      resultado.classList.remove("reprovado")
+      resultado.classList.add('aprovado')
+      resultado.innerHTML = `Parabéns, você está aprovado!!`
+      exibirMediaNoSpan.innerHTML = `Sua média é: ${calculo}`
+      containerMedia.classList.remove("hide")
+    } else {
+      resultado.classList.remove("aprovado")
+      resultado.classList.add('reprovado')
+      resultado.innerHTML = `Não foi dessa vez, reprovado!!`
+      exibirMediaNoSpan.innerHTML = `Sua média é: ${calculo}`
+      containerMedia.classList.remove("hide")
+    }
+  }
