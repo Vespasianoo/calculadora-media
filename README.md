@@ -2,6 +2,7 @@
 
 ![preview](./.github/preview.png)
 
+[🔗 Link do projeto](<https://vespasianoo.github.io/calculadora-media//>)
 
 ### 🛠 Tecnologias
 
