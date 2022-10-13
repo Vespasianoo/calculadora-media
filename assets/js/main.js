@@ -60,19 +60,5 @@ function Limpar() {
 }
 
 function aprovado() {
-    let condicao = calculo >= 6
-  
-    if (condicao) {
-      resultado.classList.remove("reprovado")
-      resultado.classList.add('aprovado')
-      resultado.innerHTML = `Parabéns, você está aprovado!!`
-      exibirMediaNoSpan.innerHTML = `Sua média é: ${calculo}`
-      containerMedia.classList.remove("hide")
-    } else {
-      resultado.classList.remove("aprovado")
-      resultado.classList.add('reprovado')
-      resultado.innerHTML = `Não foi dessa vez, reprovado!!`
-      exibirMediaNoSpan.innerHTML = `Sua média é: ${calculo}`
-      containerMedia.classList.remove("hide")
-    }
-  }
+    exibirMediaNoSpan.innerHTML = `Sua média é: ${calculo}`
+}
