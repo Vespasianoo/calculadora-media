@@ -27,10 +27,6 @@ function Criando() {
     liInputBox.insertAdjacentHTML('beforeend', '<li><input type="number" placeholder="Digite o número"></li>')   
 }
 
-function Remover() {
-    liInputBox.removeChild(liInputBox.firstElementChild);
-}
-
 function Calcular() {
     let soma = 0;
     let anchors = document.querySelectorAll('input')
@@ -52,6 +48,10 @@ function Calcular() {
     console.log(calculo)
 
     aprovado()
+}
+
+function Remover() {
+    liInputBox.removeChild(liInputBox.firstElementChild);
 }
 
 function Limpar() {
