@@ -1,4 +1,3 @@
-let resultado = document.querySelector("#resultado")
 let exibirMediaNoSpan = document.querySelector("#mediafinal")
 
 let liInputBox = document.querySelector(".list")
@@ -55,7 +54,6 @@ function Remover() {
 }
 
 function Limpar() {
-    resultado.innerHTML = ""
     exibirMediaNoSpan.innerHTML = ""
 }
 
