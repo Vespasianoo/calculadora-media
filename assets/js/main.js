@@ -47,7 +47,7 @@ function Calcular() {
     calculo = soma / arrayOfAnchors.length
     //console.log(calculo)
 
-    aprovado()
+    Exibir()
 }
 
 function Remover() {
@@ -59,6 +59,6 @@ function Limpar() {
     exibirMediaNoSpan.innerHTML = ""
 }
 
-function aprovado() {
+function Exibir() {
     exibirMediaNoSpan.innerHTML = `Sua média é: ${calculo}`
 }
