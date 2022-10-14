@@ -37,15 +37,15 @@ function Calcular() {
       arrayOfAnchors.push(Number(item.value));
     };
 
-    console.log(arrayOfAnchors);
+    //console.log(arrayOfAnchors);
 
     for(let a = 0; a < arrayOfAnchors.length; a++) {
         soma += arrayOfAnchors[a];
     }
-    console.log(soma);
+    //console.log(soma);
 
     calculo = soma / arrayOfAnchors.length
-    console.log(calculo)
+    //console.log(calculo)
 
     aprovado()
 }
