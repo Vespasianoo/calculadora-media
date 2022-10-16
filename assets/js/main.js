@@ -42,11 +42,18 @@ function Calcular() {
         soma += arrayOfAnchors[a];
     }
     //console.log(soma);
+    let condicao = arrayOfAnchors.length < 2
 
-    calculo = soma / arrayOfAnchors.length
+    if (condicao){
+        exibirMediaNoSpan.innerHTML = "Preencher no mínimo dois campos"
+    } else  {
+        calculo = soma / arrayOfAnchors.length
+        Exibir()
+    }
+
     //console.log(calculo)
 
-    Exibir()
+    
 }
 
 function Remover() {
