@@ -1,4 +1,4 @@
-## Calculadora de regra de três composta
+## Calculadora de média
 
 ![preview](./.github/preview.png)
 
